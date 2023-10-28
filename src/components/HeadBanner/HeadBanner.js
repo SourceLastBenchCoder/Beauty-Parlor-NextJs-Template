@@ -1,12 +1,14 @@
 import Link from "next/link";
 import React from "react";
+import Banner from "public/banner.png";
+import Image from "next/image";
 
 const HeadBanner = () => {
   return (
     <div className="container mx-auto my-8 flex items-center">
       <div className="flex-1">
-        <img
-          src="banner.png"
+        <Image
+          src={Banner}
           alt="Image 1"
           className="w-full rounded-lg shadow-lg"
         />
@@ -20,7 +22,10 @@ const HeadBanner = () => {
           Pragathi Beauty Parlor, where you are our top priority with less
           spend.
         </p>
-        <Link className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-white" href="/service">
+        <Link
+          className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full text-white"
+          href="/service"
+        >
           Explore the Services
         </Link>
       </div>
