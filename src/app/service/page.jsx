@@ -1,8 +1,10 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import { useState, useEffect } from "react";
 
 const ServiceList = () => {
-
+  /*
   const services = [
     {
       _id: 1,
@@ -92,6 +94,19 @@ const ServiceList = () => {
     },
     // Add more services as needed
   ];
+*/
+
+const [allPosts, setAllPosts] = useState([]);
+
+  const fetchPosts = async () => {
+    const response = await fetch("/api/service");
+    const data = await response.json();
+    setAllPosts(data);
+  };
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   return (
     <div className="p-10">
@@ -103,16 +118,20 @@ const ServiceList = () => {
       </div>
       <hr className="border-t-2 border-gray-300 mb-6" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((service, index) => (
+      {allPosts.map((service,index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
             <img
-              src={service.imageUrl}
+              src={service.banner}
               alt={service.name}
               className="w-full h-32 object-cover mb-4"
             />
             <h2 className="text-xl font-bold mb-2">{service.name}</h2>
             <p className="text-gray-700 mb-4">{service.small_description}</p>
-            <Link href={`/service/[id]`} as={`service/${service._id}`} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            <Link
+              href={`/service/[id]`}
+              as={`service/${service._id}`}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            >
               Read More...
             </Link>
           </div>

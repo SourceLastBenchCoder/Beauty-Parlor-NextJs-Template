@@ -1,6 +1,32 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const ContactUs = () => {
+  const [fullName, setFullName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [description, setDescription] = useState(null);
+  const [isSubmitted, setSubmitted] = useState(false);
+
+  const handleQuery = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/userquery/create", {
+      method: "POST",
+      body: JSON.stringify({
+        fullname: fullName,
+        email: email,
+        description: description,
+      }),
+    });
+
+    if (response.ok) {
+      setSubmitted(true);
+    } else {
+      setSubmitted(false);
+    }
+  };
+
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
@@ -18,8 +44,26 @@ const ContactUs = () => {
         {/* Right side (Contact Form) */}
         <div className="md:w-1/2 md:pl-8">
           <h1 className="text-6xl font-bold mb-2 gradient-text">Contact Us</h1>
-          <div className="mx-auto border-t-2 border-gray-400 mb-8"></div>   
-          <form>
+          <div className="mx-auto border-t-2 border-gray-400 mb-8"></div>
+
+          {isSubmitted ? (
+            <>
+              <div
+                className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+                role="alert"
+              >
+                <strong className="font-bold">Success!</strong>
+                <span className="block sm:inline">
+                  Great! Your query submitted successfully!
+                </span>
+              </div>
+              <br />
+            </>
+          ) : (
+            ""
+          )}
+
+          <form onSubmit={handleQuery}>
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
@@ -33,6 +77,7 @@ const ContactUs = () => {
                 id="name"
                 placeholder="Your Name"
                 required
+                onChange={(e) => setFullName(e.target.value)}
               />
             </div>
             <div className="mb-4">
@@ -48,6 +93,7 @@ const ContactUs = () => {
                 id="email"
                 placeholder="Your Email"
                 required
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="mb-4">
@@ -63,6 +109,7 @@ const ContactUs = () => {
                 rows="4"
                 placeholder="Your Query"
                 required
+                onChange={(e) => setDescription(e.target.value)}
               ></textarea>
             </div>
             <button
