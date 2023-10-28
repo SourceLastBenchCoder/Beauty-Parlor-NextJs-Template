@@ -18,7 +18,7 @@ This elegant template is designed to showcase your beauty parlor's services in a
 - **Tailwind CSS:** A utility-first CSS framework for crafting stylish, responsive designs.
 
 🌐 **Live Demo:**
-[Insert Live Demo Link]
+[[Insert Live Demo Link]](https://beauty-parlor-next-js-template.vercel.app/)
 
 🌈 **Customizable & Easy to Use:**
 This template is designed to be highly customizable, allowing you to effortlessly adapt it to your parlor's brand. The clean codebase and detailed documentation make it accessible for developers of all levels.
