@@ -2,7 +2,7 @@ import Service from "@/models/service";
 import { connectToDB } from "@/utils/database";
 
 export const PATCH = async (request, { params }) => {
-    const { name, description, price, banner } = await request.json();
+    const { name,small_description, description, price, banner } = await request.json();
 
     try {
         await connectToDB();
@@ -19,6 +19,7 @@ export const PATCH = async (request, { params }) => {
         existingPrompt.description = description;
         existingPrompt.price = price;
         existingPrompt.banner=banner;
+        existingPrompt.small_description=small_description
 
         await existingPrompt.save();
 
