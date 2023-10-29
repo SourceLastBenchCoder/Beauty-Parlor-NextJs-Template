@@ -35,3 +35,9 @@ This repository contains a Beauty Parlor Application developed using Next.js, Ta
 ```bash
 git clone https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template.git
 
+### Install dependencies:
+
+```bash
+cd Beauty-Parlor-NextJs-Template
+npm install
+
