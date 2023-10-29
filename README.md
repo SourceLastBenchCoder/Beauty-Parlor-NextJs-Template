@@ -1,37 +1,62 @@
-# Beauty Parlor Template - Next.js & Tailwind CSS
+# Beauty Parlor Application - Next.js, MongoDB & Tailwind CSS
 
-## Overview
+This repository contains a Beauty Parlor Application developed using Next.js, Tailwind CSS, and MongoDB. The application consists of two modules: Admin and User.
 
-🌟 Welcome to the Beauty Parlor Template built with Next.js and Tailwind CSS! 🌟
+![Web capture_29-10-2023_7251_beauty-parlor-next-js-template vercel app](https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template/assets/98646256/22a64723-53d6-4200-bb29-b81ae7562b60)
 
-This elegant template is designed to showcase your beauty parlor's services in a sleek and user-friendly manner. With carefully crafted pages for services, detailed information, contact options, an engaging 'About Us' section, and a convenient appointment booking system, it provides a seamless experience for your clients.
+## Features
 
-👑 **Key Features:**
-- **Services Page:** Present your range of services in a visually appealing format.
-- **Detail Pages:** Dive deeper into each service for a comprehensive understanding.
-- **Contact Us:** Seamless communication channels to connect with your clients.
-- **About Us:** Share the story and values that make your parlor unique.
-- **Book Appointment:** An easy-to-use booking system for scheduling client visits.
+### Admin Module
+- Create, edit, and delete services
+- View and accept appointments
+- View all user queries
 
-🚀 **Tech Stack:**
-- **Next.js:** A powerful React framework for building modern web applications.
-- **Tailwind CSS:** A utility-first CSS framework for crafting stylish, responsive designs.
+### User Module
+- View all available services
+- Place a query
+- Book an appointment
+- View appointment status and cancel appointments
 
-🌐 **Live Demo:**
-[[Click Here]](https://beauty-parlor-next-js-template.vercel.app/)
+## Technologies Used
+- Next.js
+- Tailwind CSS
+- MongoDB
 
-🌈 **Customizable & Easy to Use:**
-This template is designed to be highly customizable, allowing you to effortlessly adapt it to your parlor's brand. The clean codebase and detailed documentation make it accessible for developers of all levels.
+## Getting Started
 
-👥 **Contributions:**
-Contributions, bug reports, and feature requests are welcome! Feel free to open an issue or submit a pull request.
+### Prerequisites
+- Node.js and npm installed on your system
+- MongoDB installed and running
 
-📬 **Contact:**
-For any inquiries, reach out to lastbenchcoder@gmail.com.
+## Installation
 
-🌸 Elevate your beauty parlor's online presence with this stunning Next.js and Tailwind CSS template. Get started today!
+### Clone the repository:
 
-## License
+```bash
+git clone https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template.git
+```
+### Install dependencies:
 
-MIT
+```bash
+cd Beauty-Parlor-NextJs-Template
+npm install
+```
 
+### Set up environment variables:
+
+Create a .env.local file in the root directory and add the following variables:
+
+```bash
+MONGODB_URI="mongodb+srv://user:pwd@database.labmbyk.mongodb.net/"
+```
+
+### Run the application:
+
+```bash
+npm run dev
+```
+
+Open your browser and go to http://localhost:3000 to use the application.
+
+
+Feel free to use this format in your Git repository's README.md file. Let me know if there's anything else you'd like to add!
