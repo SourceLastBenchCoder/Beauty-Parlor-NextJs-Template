@@ -27,3 +27,11 @@ This repository contains a Beauty Parlor Application developed using Next.js, Ta
 ### Prerequisites
 - Node.js and npm installed on your system
 - MongoDB installed and running
+
+## Installation
+
+### Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/beauty-parlor.git
+
