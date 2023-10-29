@@ -41,3 +41,22 @@ git clone https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template.
 cd Beauty-Parlor-NextJs-Template
 npm install
 ```
+
+### Set up environment variables:
+
+Create a .env.local file in the root directory and add the following variables:
+
+```bash
+MONGODB_URI="mongodb+srv://user:pwd@database.labmbyk.mongodb.net/"
+```
+
+### Run the application:
+
+```bash
+npm run dev
+```
+
+Open your browser and go to http://localhost:3000 to use the application.
+
+
+Feel free to use this format in your Git repository's README.md file. Let me know if there's anything else you'd like to add!
