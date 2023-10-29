@@ -2,7 +2,7 @@
 
 This repository contains a Beauty Parlor Application developed using Next.js, Tailwind CSS, and MongoDB. The application consists of two modules: Admin and User.
 
-![Uploading Web capture_29-10-2023_7251_beauty-parlor-next-js-template.vercel.app.jpeg…]()
+![Web capture_29-10-2023_7251_beauty-parlor-next-js-template vercel app](https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template/assets/98646256/22a64723-53d6-4200-bb29-b81ae7562b60)
 
 ## Features
 
