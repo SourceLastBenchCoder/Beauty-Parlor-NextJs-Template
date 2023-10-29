@@ -33,5 +33,5 @@ This repository contains a Beauty Parlor Application developed using Next.js, Ta
 ### Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/beauty-parlor.git
+git clone https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template.git
 
