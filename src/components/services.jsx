@@ -108,7 +108,7 @@ const OurService = () => {
   const [allPosts, setAllPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("/api/service");
+    const response = await fetch("/api/service",{cache:'no-store'});
     const data = await response.json();
     setAllPosts(data);
   };

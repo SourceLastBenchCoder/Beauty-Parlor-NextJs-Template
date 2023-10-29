@@ -6,7 +6,7 @@ const QueryTable = ({ data }) => {
   const [allQuery, setAllQuery] = useState([]);
 
   const fetchQuery = async () => {
-    const response = await fetch("/api/userquery");
+    const response = await fetch("/api/userquery", { cache: "no-store" });
     const data = await response.json();
     setAllQuery(data);
   };
@@ -19,9 +19,7 @@ const QueryTable = ({ data }) => {
     <div className="p-10">
       <div className="text-center mb-6">
         <h1 className="text-6xl font-bold mb-2 gradient-text">User Queries</h1>
-        <p className="text-yellow-700">
-          All your queries displayed here..
-        </p>
+        <p className="text-yellow-700">All your queries displayed here..</p>
       </div>
       <div className="mx-auto w-16 border-t-2 border-gray-400 mb-8"></div>
       <div className="overflow-x-auto">
