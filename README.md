@@ -6,6 +6,8 @@
 
 This elegant template is designed to showcase your beauty parlor's services in a sleek and user-friendly manner. With carefully crafted pages for services, detailed information, contact options, an engaging 'About Us' section, and a convenient appointment booking system, it provides a seamless experience for your clients.
 
+![Web capture_29-10-2023_7251_beauty-parlor-next-js-template vercel app](https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template/assets/98646256/4c90cfa8-59fb-484a-aa05-923bcc2280f3)
+
 👑 **Key Features:**
 - **Services Page:** Present your range of services in a visually appealing format.
 - **Detail Pages:** Dive deeper into each service for a comprehensive understanding.
