@@ -1,4 +1,4 @@
-# Beauty Parlor Application - Next.js & Tailwind CSS
+# Beauty Parlor Application - Next.js, MongoDB & Tailwind CSS
 
 This repository contains a Beauty Parlor Application developed using Next.js, Tailwind CSS, and MongoDB. The application consists of two modules: Admin and User.
 
