@@ -6,7 +6,7 @@ const QueryTable = ({ data }) => {
   const [allQuery, setAllQuery] = useState([]);
 
   const fetchQuery = async () => {
-    const response = await fetch("/api/userquery", { cache: "no-store" });
+    const response = await fetch("/api/userquery", { cache: "no-cache" });
     const data = await response.json();
     setAllQuery(data);
   };
