@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 const AppointmentsTable = () => {
   const [appointments, setAppointments] = useState([]);
   useEffect(() => {
-    fetch("/api/appointment")
+    fetch("/api/appointment",{cache:"no-cache"})
       .then((response) => response.json())
       .then((data) => setAppointments(data));
   }, []);
