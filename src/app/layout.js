@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar/NavBar";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+import { AuthProvider } from '@/app/login/AuthContext';
 
 export const metadata = {
   title: "Create Next App",
@@ -11,11 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-gradient-to-br from-gray-800 to-gray-900 text-white">
-        <div >
+        <AuthProvider >
           <NavBar />         
           {children}
           <Footer/>
-        </div>
+        </AuthProvider>
       </body>
     </html>
   );

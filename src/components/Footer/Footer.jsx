@@ -4,6 +4,7 @@ import Instagram from "public/2.png";
 import Twitter from "public/3.png";
 import Youtube from "public/4.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -15,44 +16,24 @@ const Footer = () => {
           </span>
         </div>
         <div className="mb-4 flex space-x-4">
-          <a href="#" className="text-white hover:text-gray-300">
+          <Link href="#" className="text-white hover:text-gray-300">
             <Image src={FaceBook} alt="facebook" />
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="#" className="text-white hover:text-gray-300">
             <Image src={Instagram} alt="facebook" />
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="#" className="text-white hover:text-gray-300">
             <Image src={Twitter} alt="facebook" />
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="#" className="text-white hover:text-gray-300">
             <Image src={Youtube} alt="facebook" />
-          </a>
-        </div>
-        <div className="mb-8 space-x-4">
-          <a href="#" className="text-white hover:text-gray-300">
-            Home
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            Blog
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            Tips
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            Services
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            About
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            Contact
-          </a>
+          </Link>
         </div>
         <div className="mx-auto w-16 border-t-2 border-gray-400 mb-8"></div>
         <p className="text-sm mb-2">
           &copy; 2023 Your Company. All rights reserved.
         </p>
-        <p className="text-xs">Terms of Use | Privacy Policy</p>
+        <p className="text-xs">Terms of Use | Privacy Policy | <Link href="/login">Login</Link></p>
       </div>
     </footer>
   );

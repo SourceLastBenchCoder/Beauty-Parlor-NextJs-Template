@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useAuth } from "@/app/login/AuthContext";
+import Link from "next/link";
 
 const ServiceDetail = ({ params }) => {
   /*
@@ -18,17 +20,18 @@ const ServiceDetail = ({ params }) => {
     }
 */
 
-const [service, setService] = useState({});
+  const [service, setService] = useState({});
+  const { user, logout } = useAuth();
 
-useEffect(() => {
-  const fetchService = async () => {
-    const response = await fetch(`/api/service/${params?.id}`);
-    const data = await response.json();
-    setService(data);
-  };
+  useEffect(() => {
+    const fetchService = async () => {
+      const response = await fetch(`/api/service/${params?.id}`);
+      const data = await response.json();
+      setService(data);
+    };
 
-  if (params?.id) fetchService();
-}, [params.id]);
+    if (params?.id) fetchService();
+  }, [params.id]);
 
   return (
     <section className="bg-gray-100 py-12">
@@ -60,6 +63,15 @@ useEffect(() => {
           </div>
         </div>
       </div>
+      {user ? (
+        <Link
+          className="btn btn-primary"
+          href={`/service/edit/[id]`}
+          as={`/service/edit/${params.id}`}
+        >
+          Edit
+        </Link>
+      ) : null}
     </section>
   );
 };
