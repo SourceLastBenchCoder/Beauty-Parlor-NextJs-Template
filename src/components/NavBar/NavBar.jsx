@@ -101,6 +101,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex-1 p-2">
             <p className="text-white">Welcome {user.username}</p>
+            <button onClick={logout}>Logout</button>
           </div>
           <div className="flex-1 p-2 flex justify-end">
             <ul className="flex space-x-4">
