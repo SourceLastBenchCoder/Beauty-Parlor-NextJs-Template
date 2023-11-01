@@ -39,7 +39,7 @@ const CreateService = () => {
     <>
       {user ? (
         <section className="bg-gray-100 py-12">
-          <div className="container mx-auto">
+           <div className="sm:max-w-screen-sm mx-auto">
             <h1 className="text-6xl font-bold mb-2 gradient-text">
               Create Service
             </h1>

@@ -1,15 +1,14 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";
 
 const OurService = () => {
-
   const [allPosts, setAllPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("/api/service",{cache:'no-store'});
+    const response = await fetch("/api/service", { cache: "no-store" });
     const data = await response.json();
     setAllPosts(data);
   };
@@ -29,26 +28,31 @@ const OurService = () => {
       <div className="mx-auto w-16 border-t-2 border-gray-400 mb-8"></div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-  {allPosts.map((service, index) => (
-    <div key={index} className="bg-white p-4 rounded-lg shadow-lg">
-      <img
-        src={service.banner}
-        alt="Service 1"
-        className="w-full h-32 object-cover mb-4 rounded-lg"
-      />
-      <h3 className="text-black font-semibold mb-2">{service.name}</h3>
-      <p className="text-gray-700 mb-4">{service.small_description}</p>
-      <Link
-        href={`/service/[id]`}
-        as={`service/${service._id}`}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-      >
-        Read More...
-      </Link>
-    </div>
-  ))}
-</div>
-
+        {allPosts.map((service, index) => (
+          <div key={index} className="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src={service.banner}
+              alt="Service 1"
+              className="w-full h-32 object-cover mb-4 rounded-lg"
+            />
+            <h3 className="text-black font-semibold mb-2">{service.name}</h3>
+            {service.small_description.length > 50 ? (
+              <p className="text-gray-700 mb-4">
+                {service.small_description.substring(0, 50) + "..."}
+              </p>
+            ) : (
+              <p className="text-gray-700 mb-4">{service.small_description}</p>
+            )}
+            <Link
+              href={`/service/[id]`}
+              as={`service/${service._id}`}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+            >
+              Read More...
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

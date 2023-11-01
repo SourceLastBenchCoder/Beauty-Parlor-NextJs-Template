@@ -35,7 +35,13 @@ const ServiceList = () => {
               className="w-full h-32 object-cover mb-4 rounded-lg"
             />
             <h3 className="text-black font-semibold mb-2">{service.name}</h3>
-            <p className="text-gray-700 mb-4">{service.small_description}</p>
+            {service.small_description.length > 50 ? (
+              <p className="text-gray-700 mb-4">
+                {service.small_description.substring(0, 50) + "..."}
+              </p>
+            ) : (
+              <p className="text-gray-700 mb-4">{service.small_description}</p>
+            )}
             <Link
               href={`/service/[id]`}
               as={`service/${service._id}`}
