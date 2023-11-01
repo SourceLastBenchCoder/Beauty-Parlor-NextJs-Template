@@ -98,18 +98,25 @@ const Navbar = () => {
         </div>
       </nav>
       {user ? (
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex-1 p-2">
-            <p className="text-white">Welcome {user.username}</p>
-            <button onClick={logout}>Logout</button>
+        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center p-2">
+          <div className="flex-1 lg:p-2 flex items-center justify-center lg:justify-start">
+            <div className="text-center lg:text-left">
+              <p className="text-white">Welcome {user.username}</p>
+              <button
+                onClick={logout}
+                className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full mt-2"
+              >
+                Logout
+              </button>
+            </div>
           </div>
-          <div className="flex-1 p-2 flex justify-end">
+          <div className="flex-1 lg:p-2 flex justify-end">
             <ul className="flex space-x-4">
               <li className="text-white">
                 <Link href="/dashboard">Home</Link>
               </li>
               <li className="text-white">
-                <Link href="/service/create">Create Servce</Link>
+                <Link href="/service/create">Create Service</Link>
               </li>
               <li className="text-white">
                 <Link href="/appointment/all">Appointment</Link>
