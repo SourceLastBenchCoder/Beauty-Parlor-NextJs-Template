@@ -5,23 +5,8 @@ import { useAuth } from "@/app/login/AuthContext";
 import Link from "next/link";
 
 const ServiceDetail = ({ params }) => {
-  /*
-  const service = {
-      _id: 1,
-      category: "Skin Care",
-      name: "Eyebrows",
-      price:"300",
-      small_description:
-        "An eyebrow is an area of short hairs above each eye that follows the shape of the lower margin...",
-      description:
-        "An eyebrow is an area of short hairs above each eye that follows the shape of the lower margin of the brow ridges of some mammals. In humans, eyebrows serve two main functions: first, communication through facial expression, and second, prevention of sweat, water, and other debris from falling down into the eye socket.",
-      imageUrl:
-        "https://img.freepik.com/free-photo/eyelids-procedure-longhaired-pretty-model-beauty-salon_231208-3592.jpg?size=626&ext=jpg&ga=GA1.1.262484751.1695474021&semt=ais",
-    }
-*/
-
   const [service, setService] = useState({});
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
 
   useEffect(() => {
     const fetchService = async () => {
@@ -61,17 +46,25 @@ const ServiceDetail = ({ params }) => {
               Rs.{service.price}
             </span>
           </div>
+          {user ? (
+            <>
+              <div className="mx-auto border-t-2 border-gray-400 mb-8 mt-4"></div>
+              <div className="flex justify-between gap-2">
+                <Link
+                  className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  href={`/service/edit/[id]`}
+                  as={`/service/edit/${params.id}`}
+                >
+                  Edit
+                </Link>
+                <button className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Delete
+                </button>
+              </div>
+            </>
+          ) : null}
         </div>
       </div>
-      {user ? (
-        <Link
-          className="btn btn-primary"
-          href={`/service/edit/[id]`}
-          as={`/service/edit/${params.id}`}
-        >
-          Edit
-        </Link>
-      ) : null}
     </section>
   );
 };

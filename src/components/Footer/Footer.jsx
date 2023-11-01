@@ -29,7 +29,7 @@ const Footer = () => {
             <Image src={Youtube} alt="facebook" />
           </Link>
         </div>
-        <div className="mx-auto w-16 border-t-2 border-gray-400 mb-8"></div>
+        <div className="mx-auto w-full border-t-2 border-gray-400 mb-8"></div>
         <p className="text-sm mb-2">
           &copy; 2023 Your Company. All rights reserved.
         </p>
