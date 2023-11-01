@@ -58,5 +58,10 @@ npm run dev
 
 Open your browser and go to http://localhost:3000 to use the application.
 
+Please use the following credentials for admin login:
+
+User email: admin@sample.com
+Password: admin123
+
 
 Feel free to use this format in your Git repository's README.md file. Let me know if there's anything else you'd like to add!
