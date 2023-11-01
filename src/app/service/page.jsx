@@ -7,10 +7,18 @@ const ServiceList = () => {
   const [allPosts, setAllPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const response = await fetch("/api/service", { cache: "no-cache" });
-    const data = await response.json();
-    setAllPosts(data);
+    try {
+      const response = await fetch("/api/service", { cache: "no-cache" });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      setAllPosts(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
+
 
   useEffect(() => {
     fetchPosts();
