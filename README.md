@@ -58,9 +58,11 @@ npm run dev
 
 Open your browser and go to http://localhost:3000 to use the application.
 
-### Please use the following credentials for admin login:
+### Admin Login
 
 ![image](https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template/assets/98646256/14bbb079-2a06-40e0-b006-d95112010d23)
+
+#### Please use the following credentials for admin login:
 
 ```bash
 User email: admin@sample.com
