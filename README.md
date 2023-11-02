@@ -60,10 +60,11 @@ Open your browser and go to http://localhost:3000 to use the application.
 
 ### Please use the following credentials for admin login:
 
-![image](https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template/assets/98646256/1876ad1f-56dd-4a3c-a886-a50609e10b0b)
+![image](https://github.com/SourceLastBenchCoder/Beauty-Parlor-NextJs-Template/assets/98646256/14bbb079-2a06-40e0-b006-d95112010d23)
 
+```bash
 User email: admin@sample.com
 Password: admin123
-
+```
 
 Feel free to use this format in your Git repository's README.md file. Let me know if there's anything else you'd like to add!
